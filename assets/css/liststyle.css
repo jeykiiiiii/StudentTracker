@@ -1,0 +1,203 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #45a049;
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#navToggle {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.camera-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+video {
+    max-width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+#output {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#output h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+#text {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #45a049;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#text:focus {
+    border-color: #009688;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #45a049;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.2s;
+}
+
+.side-nav a:hover {
+    background-color: #575757;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Header and Data cell styling */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #45a049;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ensure all columns are the same width */
+th,td{
+    width: 25%;
+}
+
+
+
+/* Media query for small screens */
+@media screen and (max-width: 300px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    tr {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    th, td {
+        width: auto; /* Adjust the width of each cell */
+        display: inline-block; /* Allow cells to stay inline */
+        text-align: center;
+    }
+
+    /* Optional: Hide column headers on mobile to save space */
+    th {
+        display: none;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* General button and icon styling */
+ion-icon {
+    --ionicon-stroke-width: 30px;
+    padding: 10px;
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+}
+
+.edit {
+    background-color: rgb(57, 25, 203);
+}
+
+.delete {
+    background-color: rgb(249, 93, 93);
+}
+
